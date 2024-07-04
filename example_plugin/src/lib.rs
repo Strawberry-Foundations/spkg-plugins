@@ -12,8 +12,20 @@ impl Plugin for ExamplePlugin {
         }
     }
 
-    fn execute(&self) {
-        println!("Example spkg plugin")
+    fn execute(&self, args: &[String]) {
+        match args.first().unwrap().as_str() {
+            "test" => {
+                println!("Example spkg plugin")
+            },
+            "foo" => {
+                println!("Bar!")
+            }
+            _ => self.help()
+        }
+    }
+
+    fn help(&self) {
+        println!("Example help message")
     }
 }
 
