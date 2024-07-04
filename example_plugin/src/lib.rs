@@ -8,7 +8,7 @@ impl Plugin for ExamplePlugin {
             name: "Example Plugin",
             id: "example-plugin",
             package_id: "com.example.exampleplugin",
-            version: "0.1.0",
+            version: "0.1.1",
         }
     }
 
