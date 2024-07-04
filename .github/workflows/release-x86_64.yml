@@ -31,6 +31,6 @@ jobs:
           token: "${{ secrets.GITHUB_TOKEN }}"
           tag_name: "latest"
           prerelease: false
-          name: "Latest Build"
+          name: "Latest plugin releases for x86_64"
           files: |
             releases/*
