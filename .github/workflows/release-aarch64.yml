@@ -1,0 +1,30 @@
+name: Build & publish plugins (aarch64)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Build plugins
+        run: bash build_all.sh
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: spkg-plugins
+          path: |
+            releases/
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          token: "${{ secrets.GITHUB_TOKEN }}"
+          tag_name: "latest-aarch64"
+          prerelease: false
+          name: "Latest plugin releases for aarch64"
+          files: |
+            releases/*
