@@ -33,4 +33,4 @@ jobs:
           prerelease: false
           name: "Latest Build"
           files: |
-            releases/
+            releases/*
