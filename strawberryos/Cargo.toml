@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-libspkg = { git = "https://github.com/Strawberry-Foundations/libspkg", features = ["plugin"]}
+libspkg = { version = "0.1.5", features = ["plugin"]}
 
 [lib]
 crate-type = ["cdylib"]
