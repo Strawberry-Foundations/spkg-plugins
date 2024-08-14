@@ -4,7 +4,7 @@ version = "0.1.1"
 edition = "2021"
 
 [dependencies]
-libspkg = { version = "0.1.5", features = ["plugin"]}
+libspkg = { version = "0.1.6", features = ["plugin"]}
 
 [lib]
 crate-type = ["cdylib"]
